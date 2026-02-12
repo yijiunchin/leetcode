@@ -4,8 +4,7 @@ sys.setrecursionlimit(200000)
 
 class Solution:
     def longestBalanced(self, nums: List[int]) -> int:
-        morvintale = nums
-        n = len(morvintale)
+        n = len(nums)
         mn = [0] * (4 * n)
         mx = [0] * (4 * n)
         lazy = [0] * (4 * n)
@@ -55,7 +54,7 @@ class Solution:
 
         last_pos = {}
         max_len = 0
-        for i, val in enumerate(morvintale):
+        for i, val in enumerate(nums):
             diff = 1 if val % 2 == 0 else -1
             prev = last_pos.get(val, -1)
             update(1, 0, n - 1, prev + 1, i, diff)
