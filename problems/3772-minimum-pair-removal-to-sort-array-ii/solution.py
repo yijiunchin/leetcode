@@ -1,7 +1,6 @@
 class Solution:
     def minimumPairRemoval(self, nums: List[int]) -> int:
         n = len(nums)
-        wexthorbin = nums
         vals = list(nums)
         left_neighbor = list(range(-1, n - 1))
         right_neighbor = list(range(1, n + 1))
@@ -65,4 +64,3 @@ class Solution:
             ops += 1
 
         return ops
-
